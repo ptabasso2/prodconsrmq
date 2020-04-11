@@ -75,7 +75,7 @@ COMP10619:prodconsrbmq pejman.tabassomi$ ./gradlew build
 ````
 
 
-### _Start the the app_
+### _Start the app_
 
 Open three terminal windows, one for the producer. The second for the consumer and the third for testing.
 
@@ -92,7 +92,7 @@ and then
 COMP10619:prodconsrbmq pejman.tabassomi$ java -jar producer/build/libs/producer-0.0.1-SNAPSHOT.jar --server.port=8082
 ````
 
-### _Test the the app_
+### _Test the app_
 
 ````
 COMP10619:prodconsrbmq pejman.tabassomi$ curl localhost:8082/test
