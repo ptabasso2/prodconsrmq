@@ -82,19 +82,21 @@ Open three terminal windows, one for the producer. The second for the consumer a
 #### Consumer
 
 ````
-COMP10619:prodconsrbmq pejman.tabassomi$ java -jar consumer/build/libs/consumer-0.0.1-SNAPSHOT.jar --server.port=8081
+COMP10619:prodconsrmq pejman.tabassomi$ java -Ddd.trace.global.tags=env:datadoghq.com -jar consumer/build/libs/consumer-0.0.1-SNAPSHOT.jar --server.port=8082
 ````
 and then 
 
 #### Producer
 
 ````
-COMP10619:prodconsrbmq pejman.tabassomi$ java -jar producer/build/libs/producer-0.0.1-SNAPSHOT.jar --server.port=8082
+COMP10619:prodconsrmq pejman.tabassomi$ java -Ddd.trace.http.client.split-by-domain=true  -Ddd.trace.global.tags=env:datadoghq.com  -jar producer/build/libs/producer-0.0.1-SNAPSHOT.jar --server.port=8081
 ````
 
 ### _Test the app_
 
+Note: Run the following command several times
+
 ````
-COMP10619:prodconsrbmq pejman.tabassomi$ curl localhost:8082/test
+COMP10619:prodconsrbmq pejman.tabassomi$ curl localhost:8081/test
 ````
 
