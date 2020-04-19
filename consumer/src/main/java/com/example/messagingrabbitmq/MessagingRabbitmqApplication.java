@@ -1,8 +1,5 @@
 package com.example.messagingrabbitmq;
 
-import datadog.opentracing.DDTracer;
-import io.opentracing.Tracer;
-import io.opentracing.util.GlobalTracer;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
@@ -22,13 +19,6 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class MessagingRabbitmqApplication {
-
-	@Bean
-	public Tracer initTracer(@Value("springrabbitmqcons") String service){
-		Tracer tracer = new DDTracer.DDTracerBuilder().build();
-		GlobalTracer.register(tracer);
-		return tracer;
-	}
 
 	@Bean
 	public RestTemplate restTemplate(){
