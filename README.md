@@ -1,10 +1,17 @@
 ## SpringBoot RabbitMQ Producer / Consumer code example
 
 
-A simple project based on SpringBoot and RabbitMQ meant to use automatic instrumentation with a Consumer and Producer using RabbitMQ. 
-It is also intended to show how the RabbitMQ Spring API is used and instrumented (RabbitTemplate / RabbitListener)
+A simple project based on SpringBoot and RabbitMQ meant to showcase manual tracing and 
+context propagation continuation on the consumer end.<br> 
+It is based on the following project: <br>
+[opentracing/java-spring-rabbitmq](https://github.com/opentracing-contrib/java-spring-rabbitmq)
+
+Some additional changes were also introduced to fix decoration issues. 
+ It is used along with the RabbitMQ Spring API (RabbitTemplate/RabbitListener)
 
 ### _Preliminary tasks and first time steps_
+
+##### _If you have already RabbitMQ installed, you may skip this section and go straight to the DD agent section_
 
 **Install RabbitMQ on mac OSX (tested on High Sierra)**
 
@@ -100,3 +107,6 @@ Note: Run the following command several times
 COMP10619:prodconsrbmq pejman.tabassomi$ curl localhost:8081/test
 ````
 
+
+
+[]: https://github.com/opentracing-contrib/java-spring-rabbitmq
