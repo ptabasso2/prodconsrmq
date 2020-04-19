@@ -20,11 +20,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class MessagingRabbitmqApplication {
 
-	@Bean
-	public RestTemplate restTemplate(){
-		return new RestTemplateBuilder().build();
-	}
-
+	
 	static final String topicExchangeName = "spring-boot-exchange";
 
 	static final String queueName = "spring-boot";
