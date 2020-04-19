@@ -16,11 +16,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-amqp'
 	compile 'org.springframework.boot:spring-boot-starter:2.1.0.RELEASE'
 	compile 'org.springframework.boot:spring-boot-starter-web:2.1.0.RELEASE'
-	//implementation 'io.opentracing.contrib:opentracing-spring-rabbitmq-starter:3.0.0'
-	compile group: 'com.datadoghq', name: 'dd-trace-ot', version: "0.47.0"
-	compile 'org.springframework.boot:spring-boot-starter-aop:2.2.0.RELEASE'
-	compileOnly'org.projectlombok:lombok:1.18.10'
-	annotationProcessor'org.projectlombok:lombok:1.18.10'
+	
 }
 
 
