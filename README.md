@@ -1,13 +1,8 @@
 ## SpringBoot RabbitMQ Producer / Consumer code example
 
 
-A simple project based on SpringBoot and RabbitMQ meant to showcase manual tracing and 
-context propagation continuation on the consumer end.<br> 
-It is based on the following project: <br>
-[opentracing/java-spring-rabbitmq](https://github.com/opentracing-contrib/java-spring-rabbitmq)
-
-Some additional changes were also introduced to fix decoration issues. 
- It is used along with the RabbitMQ Spring API (RabbitTemplate/RabbitListener)
+A simple project based on SpringBoot and RabbitMQ meant to be used with the java agent and see how automatic instrumentation discovers the transaction flow from producer to consumer. 
+ 
 
 ### _Preliminary tasks and first time steps_
 
