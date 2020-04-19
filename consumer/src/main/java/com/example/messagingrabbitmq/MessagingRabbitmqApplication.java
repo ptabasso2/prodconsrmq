@@ -25,7 +25,7 @@ public class MessagingRabbitmqApplication {
 		return new RestTemplateBuilder().build();
 	}
 
-	/*static final String topicExchangeName = "spring-boot-exchange";
+	static final String topicExchangeName = "spring-boot-exchange";
 
 	static final String queueName = "spring-boot";
 
@@ -62,7 +62,7 @@ public class MessagingRabbitmqApplication {
 	@Bean
 	MessageListenerAdapter listenerAdapter(Receiver receiver) {
 		return new MessageListenerAdapter(receiver, "receiveMessage");
-	}*/
+	}
 
 	public static void main(String[] args) throws InterruptedException {
 		//SpringApplication.run(MessagingRabbitmqApplication.class, args).close();
