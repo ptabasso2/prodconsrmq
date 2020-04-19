@@ -17,7 +17,6 @@ public class Receiver {
 	@Autowired
 	RestTemplate restTemplate;
 
-	@RabbitListener(queues = "${consumer.rabbitmq.queue}")
 	public void receiveMessage(String message) {
 		System.out.println("Received <" + message + ">");
 		/*String result = restTemplate.getForObject("https://www.google.fr", String.class);
