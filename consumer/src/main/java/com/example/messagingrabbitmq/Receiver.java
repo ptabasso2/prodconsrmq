@@ -24,7 +24,7 @@ public class Receiver {
 	@Autowired
 	Tracer tracer;
 
-	@RabbitListener(queues = "${consumer.rabbitmq.queue}")
+	//@RabbitListener(queues = "${consumer.rabbitmq.queue}") // Optional. If présent => application.properties
 	public void receiveMessage(String message) {
 		System.out.println("Received <" + message + ">");
 		/*String result = restTemplate.getForObject("https://www.google.fr", String.class);
