@@ -106,7 +106,3 @@ Note: Run the following command several times
 ````
 COMP10619:prodconsrbmq pejman.tabassomi$ curl localhost:8081/test
 ````
-
-
-
-[]: https://github.com/opentracing-contrib/java-spring-rabbitmq
