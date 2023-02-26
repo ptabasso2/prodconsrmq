@@ -1,20 +1,21 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.0.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-	id 'java'
+	id 'org.springframework.boot' version '3.0.3'
 }
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '17'
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-amqp'
-	compile 'org.springframework.boot:spring-boot-starter:2.1.0.RELEASE'
-	compile 'org.springframework.boot:spring-boot-starter-web:2.1.0.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-amqp:3.0.3'
+	implementation 'org.springframework.boot:spring-boot-starter:3.0.3'
+	implementation 'org.springframework.boot:spring-boot-starter-web:3.0.3'
 }
 
